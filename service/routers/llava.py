@@ -61,6 +61,7 @@ async def main_call(request: PostImageRequest):
     }
 
     response, combined_message = await llava_call(ollama_url, data)
+    data["file"] = request.file
     await save_response_to_json(data, response, combined_message)
 
     return {"response": combined_message}
