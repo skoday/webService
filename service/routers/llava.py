@@ -27,7 +27,7 @@ async def llava_call(ollama_url: str, data: dict):
             return full_response, combined_message.strip()  # Return both the list and the combined string
 
 
-async def save_response_to_json(data, response, combined_message, filename="responses.json"):
+async def save_response_to_json(data, response, combined_message, filename=os.getenv("LOG_PATH", "responses.json")):
     # Create the response object in the desired format
     response_data = {
         "data": data,
