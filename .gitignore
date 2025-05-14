@@ -2,3 +2,6 @@
 __pycache__/
 responses.json
 logs/
+*.csv
+*.json
+.env

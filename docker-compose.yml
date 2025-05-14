@@ -10,6 +10,6 @@ services:
       - "8000:8000"
     volumes:
       - ./logs:/app/logs
-    environment:
-      LOG_PATH: /app/logs/responses.json
+    env_file:
+      - .env
     restart: always

@@ -9,3 +9,8 @@ class PostImageRequest(BaseModel):
 
 class ResponseImageRequest(BaseModel):
     response: str
+
+class OllamaCallModel(BaseModel):
+    model: str
+    prompt: str
+    images: list[str]

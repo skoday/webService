@@ -8,11 +8,8 @@ RUN pip install fastapi[standard]
 
 COPY service/ ./service/
 
-ENV LOG_PATH=/app/logs/responses.json
+RUN mkdir -p logs
 
-RUN mkdir -p /app/logs
-
-# Exponer el puerto del servicio (ajusta si usas otro puerto)
 EXPOSE 8000
 
 # Comando para ejecutar FastAPI
